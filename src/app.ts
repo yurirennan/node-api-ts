@@ -16,6 +16,7 @@ import { authRoutes } from "./routes/auth.routes";
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
 
 app.use("/login", authRoutes);
 app.use("/users", userRoutes);
